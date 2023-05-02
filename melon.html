@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-xxx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fontawesome.com/icons/heart?f=sharp&s=regular&pc=%23f0f2f4">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b37f5548ad.js" crossorigin="anonymous"></script>
+    <title>melon</title>
+</head>
+
+<body>
+    <div class="content-wrap">
+        <header>
+            <div class="top">
+                <div class="onwhite">
+                    <img class="logo" src="./img/image-removebg-preview (4).png" alt="로고">
+                    <img src="./img/Layer 3.png" alt="" class="drop">
+                </div>
+                <span class="garo">
+                    <img src="./img/가로.png" alt="">
+                    <img src="./img/가로.png" alt=""
+                        style="transform:rotate(90deg); -moz-transform: scaleX(-1);  -o-transform: scaleX(-1);  -webkit-transform: scaleX(-1); ">
+                </span>
+                <div class="search-wrap">
+                    <button class="btn01" type="button">
+                        <span data-css-icon="search">
+                            <i></i>
+                        </span>
+                    </button>
+                    <input type="search" placeholder="히힣,, 검색 해보시지,,,">
+                </div>
+                <div class="profile"><img src="./img/Layer 2.png" alt=""> </div>
+            </div>
+        </header>
+        <div class="chart">
+            <div class="bside">
+                <img src="./img/image-removebg-preview (1).png" alt="" class="mel_icon">
+                <ul class="right_list">
+                    <li class="col active" data-src="contentHome">멜론홈</li>
+                    <li class="col" data-src="contentChart">멜론차트</li>
+                    <li class="col" data-src="contentNew">최신음악</li>
+                    <li class="col" data-src="contentBrand">장르음악</li>
+                    <li class="col" data-src="contentDj">멜론DJ</li>
+                    <li class="col" data-src="contentTv">멜론TV</li>
+                    <li class="col" data-src="contentLan">어학</li>
+                    <li class="col" data-src="contentMusic">마이뮤직</li>
+                    <li class="col" data-src="contentBuy">구매목록</li>
+                    <li class="col" data-src="contentBox">보관함</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="content">
+            <div id="contentHome">
+                <div class="hometop" style="display: flex; height: 3rem;width: 100%; align-items: center;">
+                    <h1>망고밥님 함께 들어요</h1>&nbsp;
+                    <i class="fa-regular fa-greater-than" style=" color: #828282; font-size: 1rem; margin-left: 0.4rem;"></i>
+                </div>
+                <p style="font-size: 1rem; color: #a8a8a8;">음악으로 에너지 충전! 지금 이 곡 어떠세요?</p>
+                
+                <div id="slider" style="width: 200%;height: 30vh; display: grid;  grid-template-columns :repeat(8*fr); gap: 10vh;">
+                    <span id="sliding01">
+                        <img src="./img/메인슬라이더/457915020_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/505787067_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/507042600_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/457450959_org.jpg" alt="">
+                    <!-- </span>
+                    <span id="sliding02"> -->
+                        <img src="./img/메인슬라이더/520833508_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/521617528_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/imgUrl20230428025454965_org.jpg" alt="">
+                        <img src="./img/메인슬라이더/imgUrl20230501122151796_org.jpg" alt="">
+                    </span>
+                </div>
+                <img src="./img/화면 캡처 2023-05-01 023610.png" alt=""
+                    style="width: 85%;position: absolute; top:0rem; left: 5vh; z-index:-100; ">
+            </div>
+            <div id="contentChart">
+                <img src="./img/화면 캡처 2023-05-01 024120.png" alt=""
+                    style="width: 85%;position: absolute; top:0rem; left: 5vh; z-index: -100;">
+            </div>
+            <div id="contentNew">
+                <div class="toptext">
+                    <h1 class="headline">최신곡</h1>
+                    <h3 class="kpop new-music" id="pop_box" data-src="list100-1">국내</h3>
+                    <h3 class="notKorea new-music" id="pop_box2" data-src="list100-2">해외</h3>
+                    <div class="selectAll"><i class="fa-solid fa-check"
+                            style="font-size: 0.4rem; color: #a8a8a8;margin-left: 1vh; margin-top: 1vh;"></i></i>
+                        <h6>전체선택</h6>
+                    </div>
+                    <div class="playAll"><i class="fa-solid fa-play"
+                            style="font-size: 0.3rem; color: #a8a8a8;margin-left: 1vh; margin-top: 1vh;"></i>
+                        <h6>전체재생</h6>
+                    </div>
+                </div>
+                <div>
+                    <div id="list100-1"style="height: 210vh;"></div>
+                    <div id="list100-2" style="display: none;height: 230vh;"><span></span></div>
+                </div>
+            </div>
+            <div id="contentBrand">
+                장르
+            </div>
+            <div id="contentDj">
+                멜론 디제이
+            </div>
+            <div id="contentTv">
+                어쩔티비
+                <!-- <img src="./img/11127145_20230102135733_500.jpg" alt=""> -->
+            </div>
+            <div id="contentLan">
+                asdkgsgnas'gn 못알아듣쥬~?
+                <!-- <img src="./img/11127145_20230102135733_500.jpg" alt=""> -->
+            </div>
+            <div id="contentMusic">
+                lalalala
+                <!-- <img src="./img/11127145_20230102135733_500.jpg" alt=""> -->
+            </div>
+            <div id="contentBuy">
+                sfnsfkl
+                <!-- <img src="./img/11127145_20230102135733_500.jpg" alt=""> -->
+            </div>
+            <div id="contentBox">
+                <!-- <img src="./img/11127145_20230102135733_500.jpg" alt=""> -->
+            </div>
+        </div>
+
+
+
+
+
+        <div class="side">
+            <button class="btn02" type="button"><span data-css-icon="cross"><i></i></span></button>
+            <button class="btn03" type="button"><span data-css-icon="minus"><i></i></span></button>
+            <div class="elbum_warp">
+                <img src="./img/앨범 자켓.jpg" alt="">
+                <strong>Attantion</strong>
+                <p>New jeans</p>
+                <button class="btn04" type="button" style="cursor: pointer;">
+                    <i id="heart" class="fa-regular fa-heart" style="color: #ffffff;"></i> </span>
+                    <i id="heartfill" class="fa-solid fa-heart fa-beat-fade"
+                        style=" display: none;   margin-top: -1vh; margin-left: -0.5rem;"></i>
+                </button>
+
+                <!-- 플레이리스트 -->
+                <div class="jcarousel" style="width: 40vh;">
+                    <ul id="songs" style="left: -224.99px; top: 0px;">
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/VAX%20-%20Fireproof%20Feat%20Teddy%20Sky.mp3">
+
+                        </li>
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Leo%20-%20Trying.mp3">
+
+                        </li>
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20rockstar%20ft.%2021%20Savage%20(1).mp3">
+
+                        </li>
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/NF%20-%20Let%20You%20Down.mp3">
+                        </li>
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Marshmello%20-%20Silence%20ft.%20Khalid.mp3">
+                        </li>
+                        <li class="song"
+                            data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20I%20Fall%20Apart.mp3">
+                        </li>
+                    </ul>
+                    <audio crossorigin>
+                        <source src="" type="audio/mpeg">
+                    </audio>
+
+                    <div class="tl" id="timeline">
+                        <div class="slider" data-direction="horizontal">
+                            <div class="slider" data-direction="horizontal">
+                                <span class="start" id="current-time">--:--</span>
+                                <span class="total-tm" id="total-time">--:--</span>
+                                <div class="progress" style="width: 48.3445%;">
+                                    <div class="pin" id="progress-pin" data-method="rewind">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controls">
+                            <span id="previous-btn"><i class="fa fa-step-backward fa-fw" aria-hidden="true"
+                                    style="color: #ffffff;"></i></span>
+                            <span id="play-btn"><i class="fa fa-play fa-fw" aria-hidden="true"
+                                    style="color: #ffffff;"></i></span>
+                            <span id="next-btn"><i class="fa fa-step-forward fa-fw" aria-hidden="true"
+                                    style="color: #ffffff;"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    (function () {
+        $('#content').children().hide();
+        $('#contentHome').show();
+        //col 클래스를 눌렀을 경우 동작
+        $('.col').on('click', function () {
+            //클릭한 col의 형제들의 active class 없애기
+            $(this).siblings().removeClass('active');
+            //클릭한 col에게 active 클래스 추가하기
+            $(this).addClass('active');
+            //클릭한 col의 데이터 src(주소) 를 가져와서
+            const targetId = $(this).data('src');
+            //해당 src를 id로 가지고 있는 요소를 타겟으로 지정
+            const target = $('#' + targetId);
+            //타겟의 형제들을 숨김
+            target.siblings().hide();
+            //타겟 보이게 하기
+            target.show();
+        })
+        $('.new-music').on('click', function () {
+            //클릭한 col의 데이터 src(주소) 를 가져와서
+            const targetId = $(this).data('src');
+            //해당 src를 id로 가지고 있는 요소를 타겟으로 지정
+            const target = $('#' + targetId);
+            //타겟의 형제들을 숨김
+            target.siblings().hide();
+            //타겟 보이게 하기
+            target.show();
+        })
+    })();
+</script>
+<script>
+    $(document).ready(function () {
+        // 하트 아이콘 에 클릭 효과를 준당
+        $('#heart').click(function () {
+            // 이토글 클릭하면 
+            $(this).toggleClass('clicked');
+            // 하트 누르면 색이 차용                                                       
+            $('#heartfill').toggle();
+            $('#heart').toggle();
+
+
+            if ($(this).hasClass('clicked')) {
+                $('#heartfill').css('color', '#7ae55d');
+            } else {
+                $('#heartfill').css('color', '#7ae55d');
+            }
+        });
+
+        $('#heartfill').click(function () {
+            // 하트 누르면 색이 차용                                                       
+            $('#heartfill').toggle();
+            $('#heart').toggle();
+        });
+    });
+</script>
+<script>
+    (function () {
+        $('#content').children().hide();
+        $('#contentHome').show();
+        //col 클래스를 눌렀을 경우 동작
+        $('.col').on('click', function () {
+            //클릭한 col의 형제들의 active class 없애기
+            $(this).siblings().removeClass('active');
+            //클릭한 col에게 active 클래스 추가하기
+            $(this).addClass('active');
+            //클릭한 col의 데이터 src(주소) 를 가져와서
+            const targetId = $(this).data('src');
+            //해당 src를 id로 가지고 있는 요소를 타겟으로 지정
+            const target = $('#' + targetId);
+            //타겟의 형제들을 숨김
+            target.siblings().hide();
+            //타겟 보이게 하기
+            target.show();
+        })
+    })();
+</script>
+<script>
+    (function () {
+        // 나중에 다른 리스트할때 add music바꾸고 두번째줄 안에 아이디 알맞게 바꾸셈
+        function addMusic(imgSrc, title, singer, elbum) {
+            $('#list100-1')
+                .append(`<li class="list_grid">
+                    <label>
+                        <input type="checkbox" />
+                        <img src="${imgSrc}" alt=""/>
+                            <p class="songName" style="color:#e1e1e1;">${title}</p>
+                            <p class="artist" style="color:#818181;">${singer}</p>
+                            <p class="elbum" style="color:#818181;">${elbum}</p>
+                        </div>
+                            <i class="fa-solid fa-down-to-bracket" style="color: #878787;"></i>
+                    </label>
+                </li>`)
+        }
+        addMusic('', '곡명', '아티스트', '앨범 명', '다운로드')
+        addMusic('./img/www_melon_com/optimize.jpeg', 'UNFORGIVEN', 'LE SSERAFIM (르세라핌)', 'UNFORGIVEN')
+        addMusic('./img/www_melon_com/11231795_20230426114309_500 (1).jpg', "Andrea's Song (Feat. Lil Cherry) ",
+            'LTHAMA', "Andrea's Song")
+        addMusic('./img/www_melon_com/11233231_20230427160415_500 (1).jpg', '그대라는 바다', '박정현', 'The Bridge')
+        addMusic('./img/www_melon_com/11233266_20230427164053_500 (1).jpg"', 'Love(2023)', '전우성 (노을)',
+            '시작은 첫키스 OST Part.2')
+        addMusic('./img/www_melon_com/11233154_20230427144232_500 (1).jpg', '이런 내 맘', 'HAAN, Chan', '이런 내 맘')
+        addMusic('./img/www_melon_com/11233254_20230427162302_500 (1).jpg', '날씨가 따뜻 (Duet 뉘뉘)', '노르웨이 숲', '날씨가 따뜻')
+        addMusic('./img/www_melon_com/11233273_20230427164624_500 (1).jpg', '다가와', 'nochexintoma', '다가와')
+        addMusic('./img/www_melon_com/11233274_20230427164723_500 (1).jpg', '틈새', 'DORI', '가면의 여왕 OST Part.2')
+        addMusic('./img/www_melon_com/11233276_20230427165013_500 (1).jpg', '이벼리', '화아 (HwA)', 'The Love Traveler')
+        addMusic('./img/www_melon_com/11233284_20230427165354_500 (1).jpg', '더러미송 (feat. 개그우먼 안소미)', '비남', '더러미송')
+        addMusic('./img/www_melon_com/11233286_20230427165436_500 (1).jpg', '봄이야', 'V.O.S', '봄이야')
+        addMusic('./img/www_melon_com/11233290_20230427165651_500 (1).jpg', '안녕이라고 말하지마', '경서', '안녕이라고 말하지마')
+    })();
+</script>
+<script>
+    (function () {
+        // 나중에 다른 리스트할때 add music바꾸고 두번째줄 안에 아이디 알맞게 바꾸셈
+        function addMusic(imgSrc, title, singer, elbum, dawnlod) {
+            $('#list100-2')
+                .append(`<li class="list_grid">
+                    <label>
+                        <input type="checkbox" />
+                        <img src="${imgSrc}" alt=""/>
+                            <p class="songName" style="color:#e1e1e1;">${title}</p>
+                            <p class="artist" style="color:#818181;">${singer}</p>
+                            <p class="elbum" style="color:#818181;">${elbum}</p>
+                        </div>
+                            <i class="fa-solid fa-down-to-bracket" style="color: #878787;"></i>
+                    </label>
+                </li>`)
+        }
+        addMusic('', '곡명', '아티스트', '앨범 명', '다운로드')
+        addMusic('./img/해외팝/10967904_20230427144426_500.jpg', 'Glad U Came', 'Jason Derulo', 'Glad U Came')
+        addMusic('./img/해외팝/11225536_20230417170902_500.jpg', 'Give It To Me', 'Miguel', 'Give It To Me')
+        addMusic('./img/해외팝/11225536_20230417170902_500.jpg', "Perfect For You", 'Peach PRC', 'Manic Dream Pixie')
+        addMusic('./img/해외팝/11226260_20230418154853_500.jpg', 'Camaraderie', 'Yuna', 'Masih Yuna')
+        addMusic('./img/해외팝/11226499_20230418181531_500.jpg', 'Tasty', 'DaniLeigh', 'Tasty')
+        addMusic('./img/해외팝/11226694_20230418224808_500.jpg', 'Traces of You (From "Norah Jones', 'Norah Jones, Anoushka Shankar', 'Traces of You (From')
+        addMusic('./img/해외팝/11226755_20230418225740_500.jpg', 'Just Relax', 'Lola Brooke', 'Just Relax')
+        addMusic('./img/해외팝/11227090_20230419105219_500.jpg', 'GOOD GIRL ERA (SIDE A)', 'UPSAHL', 'UPSAHL PRESENTS: THE PHX TAPES V1 ')
+        addMusic('./img/해외팝/11227301_20230419121034_500.jpg', 'Ribs', 'Rachel Chinouriri', 'Ribs')
+        addMusic('./img/해외팝/11227304_20230419121048_500.jpg', 'Crumbled', 'ThxSoMch', 'Crumbled')
+        addMusic('./img/해외팝/11227736_20230419171333_500.jpg', 'Hope This Song Is For You (From the Netflix Film ‘A Beautiful Life’)', 'Christopher', 'Christopher')
+        addMusic('./img/해외팝/11228194_20230419232623_500.jpg', "I Won't", 'Etham', "I Won't")
+        addMusic('./img/해외팝/11226580_20230418184102_500.jpg', 'Cheetah', '잭슨 (Jackson Wang)', 'Cheetah')
+        addMusic('./img/해외팝/11226643_20230418223630_500.jpg', 'Live Without Love', 'Shouse, David Guetta', 'Live Without Love')
+    })();
+</script>
+<script>
+     (function () {
+        $('#content').children().hide();
+</script>
+</body>
+
+</html>
